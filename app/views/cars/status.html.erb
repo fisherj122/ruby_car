@@ -1,0 +1,27 @@
+<h1>Car Simulator - Status</h1>
+<h2>Your Car</h2>
+<p style="background-color: <%= @car.color %>;"><%= "Make: #{@car.make}" %></p>
+<p><%= "Model Year: #{@car.year}" %></p>
+<p><%= "Speed: #{@car.speed} Km/h"%> </p>
+<p><%= "Lights On? #{@car.lights_on?}" %></p>
+<p><%= "Parking Brake Active? #{@car.parking_brake?}" %></p>
+<p><%= "Color: #{@color}" %></p>
+
+<form action="/cars/accelerate" method="get">
+  <input type="submit" value="Accelerate"/>
+</form>
+
+<form action="/cars/brake" method="get">
+  <input type="submit" value="Brake"/>
+</form>
+
+<form action="/cars/lights" method="get">
+  <input type="submit" value="Lights"/>
+</form>
+
+<label for="parking">Parking Brake:</label>
+<form action="/cars/park" method="get" id="parking">
+  <input type="radio" name="park" value="ParkingBrakeOn"/>On<br>
+  <input type="radio" name="park" value="ParkingBrakeOff" checked/>Off<br>
+  <input type="submit" value="Toggle Parking Brake"/>
+</form>

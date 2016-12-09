@@ -1,0 +1,9 @@
+<h1>Welcome to the Car Simulator</h1>
+<form action="/cars/index" method="get">
+  <input type="text" name="make" placeholder="Make" required>
+  <input type="text" name="year" placeholder="Model Year" required>
+  <input type="color" name="color">
+  <input type="submit" value="Simulate Car">
+</form>
+<hr>
+<%= flash[:alert] %>
